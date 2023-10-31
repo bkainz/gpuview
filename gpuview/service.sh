@@ -12,13 +12,13 @@ sudo apt install -y supervisor
 echo ''
 echo 'Deploying service...'
 
-log_path=/home/${user}/.gpuview
+log_path=/tmp/${user}/.gpuview
 mkdir -p ${log_path}
 
 sudo echo "[program:gpuview]
 user = ${user}
-environment = HOME=\"/home/${user}\",USER=\"${user}\"
-directory = /home/${user}
+environment = HOME=\"/tmp/${user}\",USER=\"${user}\"
+directory = /tmp/${user}
 command = ${path} run ${1}
 autostart = true
 autorestart = true
