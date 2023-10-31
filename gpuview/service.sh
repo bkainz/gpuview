@@ -8,6 +8,7 @@ path=$(which gpuview)
 echo ''
 echo 'Installing supervisor...'
 sudo apt install -y supervisor
+sudo supervisorctl update
 
 echo ''
 echo 'Deploying service...'
